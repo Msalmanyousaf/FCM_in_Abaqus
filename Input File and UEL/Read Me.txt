@@ -1,0 +1,16 @@
+Perform the following procedure to incorporate USER ELEMENTS:
+***************************************************************************************
+1- Delete the cut elements from the list of elements defined under type=CPS4
+***************************************************************************************
+2- Add the following lines after elements defined under type=CPS4:
+
+*USER ELEMENT, TYPE=U100, NODE=4, PROPERTIES=2 ,COORDINATES=2
+1,2
+**
+*ELEMENT, TYPE=U100, ELSET=Cut
+<Add the cut elements along with nodal connectivity>
+
+Example: if a cut element's label is 2 and it has a nodal connectivity of (3,4,15,14), it has to be added as follows:
+2,3,4,15,14
+***************************************************************************************
+Remark: The cut elements labels can be found in *Elset, elset=Cut
